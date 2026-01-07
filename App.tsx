@@ -5,7 +5,7 @@ import { DEFAULT_POINT_SYSTEM } from './constants';
 import ImageUploader from './components/ImageUploader';
 import PointSystemConfig from './components/PointSystemConfig';
 import Leaderboard from './components/Leaderboard';
-import { GeminiService } from './services/geminiService';
+// import { GeminiService } from './services/geminiService';
 
 const App: React.FC = () => {
   const [state, setState] = useState<AppState>({
@@ -18,7 +18,7 @@ const App: React.FC = () => {
     error: null,
   });
 
-  const gemini = useMemo(() => new GeminiService(), []);
+  // const gemini = useMemo(() => new GeminiService(), []);
 
   const handleProcessImages = async () => {
     if (state.lobbyImages.length === 0 || state.endImages.length === 0) {
@@ -30,16 +30,16 @@ const App: React.FC = () => {
 
     try {
       // Step 1: Extract Lobby Data
-      const slots = await gemini.extractLobbyData(state.lobbyImages);
+      // const slots = await gemini.extractLobbyData(state.lobbyImages);
       // Step 2: Extract Result Data
-      const results = await gemini.extractEndData(state.endImages);
+      // const results = await gemini.extractEndData(state.endImages);
 
-      setState(prev => ({
-        ...prev,
-        slots,
-        results,
-        isProcessing: false
-      }));
+      // setState(prev => ({
+      //   ...prev,
+      //   slots,
+      //   results,
+      //   isProcessing: false
+      // }));
     } catch (err: any) {
       console.error(err);
       setState(prev => ({ 
