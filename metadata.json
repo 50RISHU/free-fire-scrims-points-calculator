@@ -1,0 +1,7 @@
+{
+  "name": "Free Fire Scrims Points Calculator",
+  "description": "An advanced tool for Free Fire tournament organizers to automate leaderboard calculation by extracting data from lobby and end-game screenshots using Gemini Vision.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
